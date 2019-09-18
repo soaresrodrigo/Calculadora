@@ -4,7 +4,10 @@
 main(){
 	
 	float n1, n2, resultado;
-	int op;
+	int op, continua;
+	
+	system("cls");
+	printf("******* Sistema de calculo basico ********\n\n\n");
 	
 	printf("Informe o primeiro numero: ");
 	scanf("%f", &n1);
@@ -45,6 +48,15 @@ main(){
 	
 	system("cls");
 	printf("Resultado final e %.2f\n\n", resultado);
+	
+	printf("Deseja continuar usando o sistema? ( 1 = Sim)");
+	scanf("%d", &continua);
+	if(continua == 1){
+		return main();
+	}else{
+		system("cls");
+		printf("Obrigado por usar o sistema\n\n");
+	}
 	
 	
 	system("pause");
