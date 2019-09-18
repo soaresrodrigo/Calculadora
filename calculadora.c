@@ -3,7 +3,8 @@
 
 main(){
 	
-	float n1, n2;
+	float n1, n2, resultado;
+	int op;
 	
 	printf("Informe o primeiro numero: ");
 	scanf("%f", &n1);
@@ -13,10 +14,37 @@ main(){
 	scanf("%f", &n2);
 	
 	system("cls");
-	printf("%.2f + %.2f = %.2f\n", n1, n2, n1+n2);
-	printf("%.2f - %.2f = %.2f\n", n1, n2, n1-n2);
-	printf("%.2f x %.2f = %.2f\n", n1, n2, n1*n2);
-	printf("%.2f / %.2f = %.2f\n", n1, n2, n1/n2);
+	printf("escolha a operacao :\n ");	
+	printf("| #1 + | #2 - | #3 * | #4 / | ");
+	scanf("%d", &op);
+	
+	switch(op){
+		case 1:
+			resultado = n1 + n2;
+			break;
+		case 2:
+			resultado = n1 - n2;
+			break;
+		case 3:
+			resultado = n1 * n2;
+			break;
+		case 4:
+			if(n2 == 0){
+				system("cls");
+				printf("Nao e possivel dividir por zero\n\n");
+				system("pause");
+			}
+			resultado = n1 / n2;
+			break;
+		default:
+			system("cls");
+			printf("Opcao invalida\n\n");
+			system("pause");
+			
+	}
+	
+	system("cls");
+	printf("Resultado final e %.2f\n\n", resultado);
 	
 	
 	system("pause");
